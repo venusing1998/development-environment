@@ -1,6 +1,6 @@
 yum -y install autoconf automake gcc-c++ ncurses-devel
 cd ~/Downloads
-wget https://github.com/hishamhm/htop/archive/2.2.0.tar.gz
+wget -P https://github.com/hishamhm/htop/archive/2.2.0.tar.gz
 tar -xzvf 2.2.0.tar.gz
 cd htop-2.2.0
 mkdir -p /usr/local/htop
