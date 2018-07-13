@@ -138,19 +138,6 @@ mysql -uroot -p
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'www0809LL!';
 ```
 
-# Install nginx
-
-```bash
-yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
-cd ~/Downloads
-wget http://nginx.org/download/nginx-1.14.0.tar.gz
-tar -xzvf nginx-1.14.0.tar.gz
-cd nginx-1.14.0
-./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module
-make && make install
-/usr/local/nginx/sbin/nginx
-```
-
 # Install Node.js
 
 ```bash
@@ -198,6 +185,7 @@ cd ~/Downloads
 wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz
 tar -xzvf Python-3.6.5.tgz
 cd Python-3.6.5
+mkdir -p /usr/local/python3
 ./configure prefix=/usr/local/python3
 make && make install
 vim ~/.bashrc
@@ -211,19 +199,8 @@ vim ~/.config/pip/pip.conf
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 <!-- end -->
-pip3 install virtualenv
-virtualenv --python=python3 venv
 ```
 
-# Install R
-
-```bash
-yum -y install R
-vim ~/.Rprofile
-<!-- begin -->
-options("repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
-<!-- end -->
-```
 # Install redis
 
 ```bash
@@ -254,88 +231,4 @@ service iptables restart
 service redis start
 redis-cli
 config set requirepass "password"
-```
-
-# Install vim
-
-```bash
-yum -y install vim
-vim ~/.vimrc
-<!-- begin -->
-set autoindent
-"set background=black
-set cin
-set cursorline
-set hlsearch
-set history=1000
-set laststatus=2
-"set list
-set number
-set ruler
-set shiftwidth=4
-set showcmd
-set showmatch
-set smartindent
-set tabstop=4
-syntax on
-<!-- end -->
-```
-
-# Install shadowsocks
-
-```bash
-cd ~/Downloads
-wget http://w.huizhanzhang.com/shadowsocks.sh
-chmod +x shadowsocks.sh
-./shadowsocks.sh 2>&1 | tee shadowsocks.log
-```
-
-#Install ss5
-
-```bash
-yum -y install gcc openldap-devel pam-devel openssl-devel
-cd ~/Downloads
-wget http://jaist.dl.sourceforge.net/project/ss5/ss5/3.8.9-8/ss5-3.8.9-8.tar.gz
-tar -xzvf ss5-3.8.9-8.tar.gz
-cd ss5-3.8.9
-./configure
-make && make install
-chmod a+x /etc/init.d/ss5
-vim /etc/opt/ss5/ss5.conf
-<!-- begin -->
-auth    0.0.0.0/0               -               u
-permit u    0.0.0.0/0   -   0.0.0.0/0   -   -   -   -   -
-<!-- end -->
-vim /etc/opt/ss5/ss5.passwd
-<!-- begin -->
-username password
-<!-- end -->
-vim /etc/sysconfig/ss5
-<!-- begin -->
-SS5_OPTS=" -u root -b 0.0.0.0:8080"
-<!-- end -->
-service ss5 start
-service ss5 status
-chkconfig --add ss5
-chkconfig --level 345 ss5 on
-chkconfig --list | grep ss5
-```
-
-# Install htop
-
-```bash
-yum -y install autoconf automake gcc-c++ ncurses-devel
-cd ~/Downloads
-wget https://github.com/hishamhm/htop/archive/2.2.0.tar.gz
-tar -xzvf 2.2.0.tar.gz
-cd htop-2.2.0
-mkdir -p /usr/local/htop
-./autogen.sh
-./configure prefix=/usr/local/htop
-make && make install
-vim ~/.bashrc
-<!-- begin -->
-export PATH=$PATH:/usr/local/htop/bin
-<!-- end -->
-source ~/.bashrc
 ```

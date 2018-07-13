@@ -7,8 +7,4 @@ mkdir -p /usr/local/htop
 ./autogen.sh
 ./configure prefix=/usr/local/htop
 make && make install
-vim ~/.bashrc
-<!-- begin -->
-export PATH=$PATH:/usr/local/htop/bin
-<!-- end -->
-source ~/.bashrc
+ln ‐sv /usr/local/htop/bin/htop /usr/bin/htop
