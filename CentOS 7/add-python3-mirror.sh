@@ -1,4 +1,2 @@
 mkdir -p ~/.config/pip
-touch ~/.config/pip/pip.conf
-echo '[global]' >> ~/.config/pip/pip.conf
-echo 'index-url = https://pypi.tuna.tsinghua.edu.cn/simple' >> ~/.config/pip/pip.conf
+wget -P ~/.config/pip https://raw.githubusercontent.com/venusing1998/development-environment/master/CentOS%207/pip.conf

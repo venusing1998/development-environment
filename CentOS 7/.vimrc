@@ -1,0 +1,16 @@
+set autoindent
+"set background=black
+set cin
+set cursorline
+set hlsearch
+set history=1000
+set laststatus=2
+"set list
+set number
+set ruler
+set shiftwidth=4
+set showcmd
+set showmatch
+set smartindent
+set tabstop=4
+syntax on

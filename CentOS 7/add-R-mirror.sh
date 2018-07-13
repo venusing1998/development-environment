@@ -1,2 +1,1 @@
-touch ~/.Rprofile
-echo 'options("repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))' >> ~/.Rprofile
+wget -P ~ https://raw.githubusercontent.com/venusing1998/development-environment/master/CentOS%207/.Rprofile
