@@ -1,1 +1,1 @@
-yum -y install R
+sudo yum -y install R

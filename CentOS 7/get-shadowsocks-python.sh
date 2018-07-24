@@ -1,4 +1,4 @@
-yum -y install wget
+sudo yum -y install wget
 cd ~/Downloads
 wget https://raw.githubusercontent.com/venusing1998/development-environment/master/CentOS%207/shadowsocks-python.sh
 chmod +x ss.sh
