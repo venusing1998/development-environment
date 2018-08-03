@@ -1,14 +1,3 @@
-
-
-# Install git
-
-```bash
-yum -y install git
-git config --global user.email "your_email@example.com"
-git config --global user.name "yourname"
-```
-
-
 # Install go
 
 ```bash
@@ -84,30 +73,6 @@ chmod +x /etc/init.d/php-fpm
 /etc/init.d/php-fpm start
 killall php-fpm
 service php-fpm start
-```
-
-# Install python3
-
-```bash
-yum -y install automake gcc gcc‐c++ glibc libstdc++ make ncurses‐devel openssh‐clients openssl openssl‐devel patch readline‐devel sqlite‐devel xz zip unzip
-cd ~/Downloads
-wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz
-tar -xzvf Python-3.6.5.tgz
-cd Python-3.6.5
-mkdir -p /usr/local/python3
-./configure prefix=/usr/local/python3
-make && make install
-vim ~/.bashrc
-<!-- begin -->
-export PATH=$PATH:/usr/local/python3/bin
-<!-- end -->
-source ~/.bashrc
-mkdir -p ~/.config/pip
-vim ~/.config/pip/pip.conf
-<!-- begin -->
-[global]
-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-<!-- end -->
 ```
 
 # Install redis
