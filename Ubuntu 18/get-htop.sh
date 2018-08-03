@@ -1,4 +1,4 @@
-sudo apt -y install autoconf automake gcc-c++ ncurses-devel
+sudo apt -y install autoconf automake g++ ncurses-devel
 cd ~/Downloads
 wget https://github.com/hishamhm/htop/archive/2.2.0.tar.gz
 tar -xzvf 2.2.0.tar.gz
