@@ -196,7 +196,7 @@ function install_ss(){
             /etc/init.d/shadowsocks start
         else
             echo ""
-            echo "Shadowsocks install failed! Please visit blog.whsir.com and contact."
+            echo "Shadowsocks install failed!"
             exit 1
         fi
         clear
@@ -209,7 +209,7 @@ function install_ss(){
         echo -e "Your Local Port: \033[41;37m 1080 \033[0m"
         echo -e "Your Encryption Method: \033[41;37m aes-256-cfb \033[0m"
         echo ""
-        echo "Welcome to visit:blog.whsir.com"
+        echo "Welcome!"
         echo "Enjoy it!"
         echo ""
         exit 0

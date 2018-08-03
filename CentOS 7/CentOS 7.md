@@ -1,13 +1,4 @@
-# Change the language
 
-```bash
-vim /etc/locale.conf
-<!-- begin -->
-LANG=en_US.UTF-8
-LANG=zh_CN.UTF-8
-<!-- end -->
-source /etc/profile
-```
 
 # Install git
 
@@ -15,13 +6,6 @@ source /etc/profile
 yum -y install git
 git config --global user.email "your_email@example.com"
 git config --global user.name "yourname"
-```
-
-# Set up SSH key
-
-```bash
-cd ~/.ssh
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 
