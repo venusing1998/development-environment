@@ -10,23 +10,7 @@
 defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
 ```
 
-# Install homebrew
-
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-cd "$(brew --repo)"
-git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
-cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-brew update
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
-source ~/.bash_profile
-```
-
-# Install homebrew-cask
-
-```bash
-brew tap caskroom/cask
 # install alfred
 brew cask install alfred
 # install baidunetdisk
@@ -42,7 +26,6 @@ brew cask install keycastr
 # Install mas
 
 ```bash
-brew install mas
 # install Keynote
 mas install 409183694
 # install Magnet
@@ -66,28 +49,6 @@ mas install 491854842
 ```bash
 git config --global user.email "your_email@example.com"
 git config --global user.name "yourname"
-```
-
-# Install oh-my-zsh
-
-```bash
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-cd ~/.oh-my-zsh/custom/plugins/
-git clone https://github.com/zsh-users/zsh-autosuggestions.git
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-cd ~/.zshrc
-<!-- begin -->
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="bira"
-plugins=(
-  git
-  last-working-dir
-
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-<!-- end -->
-source ~/.zshrc
 ```
 
 # Install python3
