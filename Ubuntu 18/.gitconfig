@@ -1,0 +1,16 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	email = christoleavenow@gmail.com
+	name = Chris
+[color]
+	ui = auto
+[http]
+	proxy = socks5://127.0.0.1:1080
+[https]
+	proxy = socks5://127.0.0.1:1080
+[credential]
+	helper = store
